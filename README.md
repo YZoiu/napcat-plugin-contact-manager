@@ -51,16 +51,30 @@ dist/
 | `deleteFriendBothDel` | `false` | 删除好友时双向删除 |
 | `debug` | `false` | 输出调试日志 |
 
-## 发布
+## 发布与贡献
 
-推送 `v*` 标签会触发 GitHub Actions 构建 Release 包，并提交官方插件索引 PR。
+### 发布 Release
+
+推送 `v*` 标签会触发 GitHub Actions 构建 Release 包：
 
 ```bash
 git tag v1.0.0
 git push origin v1.0.0
 ```
 
-索引更新需要在仓库 Secrets 中配置 `INDEX_PAT`。
+构建成功后，Release 中会生成 `napcat-plugin-contact-manager.zip`。
+
+### 提交官方插件索引
+
+如果需要自动向官方插件索引提交 PR，请先在仓库中配置 `INDEX_PAT`：
+
+1. 打开 GitHub 仓库 `Settings` -> `Secrets and variables` -> `Actions`
+2. 点击 `New repository secret`
+3. 名称填写 `INDEX_PAT`
+4. 值填写你的 GitHub Personal Access Token
+5. Token 权限至少需要允许读取/写入公开仓库内容并创建 Pull Request
+
+配置完成后再次推送版本标签，CI 会在创建 Release 后触发索引更新流程。
 
 ## 注意
 
