@@ -1,7 +1,7 @@
 {
   "name": "napcat-plugin-contact-manager",
   "plugin": "联系人批量管理",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "index.mjs",
   "description": "在 WebUI 中批量管理好友与群聊：删除好友、退群、移动分组、备注等",
