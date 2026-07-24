@@ -1,5 +1,5 @@
 import type { PageId } from '../App'
-import { IconDashboard, IconSettings, IconGroup, IconGithub, IconSun, IconUser } from './icons'
+import { IconDashboard, IconSettings, IconGroup, IconSun, IconUser } from './icons'
 
 interface SidebarProps {
   currentPage: PageId
@@ -28,18 +28,6 @@ export default function Sidebar({ currentPage, onPageChange }: SidebarProps) {
           </div>
         ))}
       </nav>
-
-      <div className="px-3 pb-2">
-        <a
-          href="https://napneko.github.io/develop/plugin/publish"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="sidebar-item no-underline"
-        >
-          <IconGithub size={18} />
-          <span>发布文档</span>
-        </a>
-      </div>
 
       <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-800">
         <div className="flex items-center justify-center w-full py-2 rounded-lg text-gray-500 bg-gray-50 dark:bg-gray-800/50 cursor-default text-xs gap-2">
