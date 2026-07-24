@@ -1,0 +1,57 @@
+{
+  "name": "napcat-plugin-contact-manager",
+  "plugin": "联系人批量管理",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
+  "description": "在 WebUI 中批量管理好友与群聊：删除好友、退群、移动分组、备注等",
+  "author": "YZoiu",
+  "license": "MIT",
+  "keywords": [
+    "napcat",
+    "plugin",
+    "qq",
+    "friend",
+    "group",
+    "contact",
+    "batch"
+  ],
+  "napcat": {
+    "tags": [
+      "工具",
+      "管理"
+    ],
+    "minVersion": "4.14.0",
+    "homepage": "https://github.com/YZoiu/napcat-plugin-contact-manager"
+  },
+  "dependencies": {
+    "napcat-types": "0.0.16"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.19.33",
+    "napcat-plugin-debug-cli": "^1.2.8",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1",
+    "ws": "^8.19.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:webui": "cd src/webui && pnpm install && pnpm run build",
+    "dev:webui": "cd src/webui && pnpm run dev",
+    "watch": "vite build --watch",
+    "dev": "vite build --watch",
+    "push": "vite build",
+    "deploy": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "homepage": "https://github.com/YZoiu/napcat-plugin-contact-manager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YZoiu/napcat-plugin-contact-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YZoiu/napcat-plugin-contact-manager/issues"
+  }
+}
